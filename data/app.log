@@ -1,0 +1,85 @@
+{"level":"info","message":"Backend listening","port":"4000","timestamp":"2025-11-20 08:54:38"}
+{"database":"finpro","host":"db","level":"info","message":"DB pool ready","timestamp":"2025-11-20 08:54:38"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-20 08:55:48","username":"anonymous"}
+{"filename":"CS_EF_EkanandaZhafifDean_2306264420_Jartel2.docx","level":"info","message":"File deleted","timestamp":"2025-11-20 08:55:51","username":"anonymous"}
+{"ip":"::ffff:172.18.0.1","level":"warn","message":"Unauthorized DELETE attempt","timestamp":"2025-11-20 08:56:11","token_provided":false,"username":"test"}
+{"ip":"::ffff:172.18.0.1","level":"warn","message":"Unauthorized DELETE attempt","timestamp":"2025-11-20 08:56:18","token_provided":false,"username":"test"}
+{"filename":"test.txt","level":"warn","message":"Delete: file not found","timestamp":"2025-11-20 08:56:23","username":"test"}
+{"level":"info","message":"Backend listening","port":"4000","timestamp":"2025-11-20 08:59:14"}
+{"database":"finpro","host":"db","level":"info","message":"DB pool ready","timestamp":"2025-11-20 08:59:14"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-20 09:02:16","username":"cihuy"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-20 09:05:33","username":"anonymous"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-20 09:05:39","username":"anonymous"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-20 09:09:04","username":"Adi"}
+{"filename":"image-1.png","level":"info","message":"File deleted","timestamp":"2025-11-20 09:09:59","username":"Adi"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-20 09:11:00","username":"anonymous"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-20 09:11:04","username":"Adi"}
+{"filename":"Screenshot (1).png","level":"info","message":"File uploaded","size":636986,"timestamp":"2025-11-20 09:11:49","username":"Adi"}
+{"filename":"Screenshot (1).png","level":"info","message":"File deleted","timestamp":"2025-11-20 09:12:03","username":"Adi"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-20 09:14:32","username":"Adi"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-20 09:14:53","username":"Adi"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-20 09:16:26","username":"Adi"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-20 09:17:29","username":"anonymous"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-20 09:18:12","username":"anonymous"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-20 09:20:41","username":"anonymous"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-20 09:27:50","username":"anonymous"}
+{"filename":"Screenshot 2025-11-20 150432.png","level":"info","message":"File uploaded","size":33078,"timestamp":"2025-11-20 09:30:47","username":"anonymous"}
+{"filename":"Screenshot 2025-11-20 150432.png","level":"info","message":"File deleted","timestamp":"2025-11-20 09:32:52","username":"anonymous"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-20 09:36:35","username":"anonymous"}
+{"level":"info","message":"Backend listening","port":"4000","timestamp":"2025-11-23 09:41:13"}
+{"database":"finpro","host":"db","level":"info","message":"DB pool ready","timestamp":"2025-11-23 09:41:13"}
+{"level":"info","message":"Backend listening","port":"4000","timestamp":"2025-11-23 09:41:48"}
+{"database":"finpro","host":"db","level":"info","message":"DB pool ready","timestamp":"2025-11-23 09:41:48"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-23 09:42:20","username":"Adi"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-23 09:43:58","username":"awikwok"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-23 09:44:13","username":"anonymous"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-23 09:44:24","username":"testuser"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-23 09:44:35","username":"awikwok"}
+{"level":"info","message":"User authenticated","timestamp":"2025-11-23 09:44:51","username":"aasda"}
+{"filename":"Screenshot_22-11-2025_18318_.jpeg","level":"info","message":"File uploaded","size":151957,"timestamp":"2025-11-23 09:45:22","username":"aasda"}
+{"filename":"Screenshot_22-11-2025_18318_.jpeg","level":"info","message":"File deleted","timestamp":"2025-11-23 09:46:15","username":"aasda"}
+{"level":"info","message":"Backend listening","port":4000,"timestamp":"2025-11-23 17:18:57"}
+{"error":"","host":"localhost","level":"error","message":"DB init error","timestamp":"2025-11-23 17:18:57"}
+{"error":"","level":"error","message":"Login error","timestamp":"2025-11-23 17:20:30"}
+{"error":"","level":"error","message":"Register error","timestamp":"2025-11-23 17:20:32"}
+{"level":"info","message":"Backend listening","port":"4000","timestamp":"2025-11-23 10:38:43"}
+{"database":"finpro","host":"db","level":"info","message":"DB pool ready","timestamp":"2025-11-23 10:38:43"}
+{"error":"Table 'finpro.accounts' doesn't exist","level":"error","message":"Register error","timestamp":"2025-11-23 10:39:18"}
+{"error":"Table 'finpro.accounts' doesn't exist","level":"error","message":"Login error","timestamp":"2025-11-23 10:39:20"}
+{"error":"Table 'finpro.accounts' doesn't exist","level":"error","message":"Login error","timestamp":"2025-11-23 10:39:21"}
+{"error":"Table 'finpro.accounts' doesn't exist","level":"error","message":"Login error","timestamp":"2025-11-23 10:39:22"}
+{"error":"Table 'finpro.accounts' doesn't exist","level":"error","message":"Login error","timestamp":"2025-11-23 10:39:22"}
+{"error":"Table 'finpro.accounts' doesn't exist","level":"error","message":"Login error","timestamp":"2025-11-23 10:39:22"}
+{"error":"Table 'finpro.accounts' doesn't exist","level":"error","message":"Login error","timestamp":"2025-11-23 10:39:22"}
+{"error":"Table 'finpro.accounts' doesn't exist","level":"error","message":"Login error","timestamp":"2025-11-23 10:39:22"}
+{"level":"info","message":"Backend listening","port":"4000","timestamp":"2025-11-23 10:42:26"}
+{"database":"finpro","host":"db","level":"info","message":"DB pool ready","timestamp":"2025-11-23 10:42:26"}
+{"level":"info","message":"Backend listening","port":"4000","timestamp":"2025-11-23 10:45:32"}
+{"database":"finpro","host":"db","level":"info","message":"DB pool ready","timestamp":"2025-11-23 10:45:32"}
+{"level":"info","message":"Akun baru terdaftar","timestamp":"2025-11-23 10:46:30","username":"Eka"}
+{"level":"info","message":"User login","timestamp":"2025-11-23 10:46:33","username":"Eka"}
+{"level":"info","message":"User login","timestamp":"2025-11-23 10:47:10","username":"Eka"}
+{"filename":"CS Modul Wi-Fi.pdf","level":"info","message":"File uploaded","size":499492,"timestamp":"2025-11-23 10:47:27","username":"Eka"}
+{"filename":"CS Modul Wi-Fi.pdf","level":"info","message":"File deleted","timestamp":"2025-11-23 10:47:38","username":"Eka"}
+{"level":"info","message":"Akun baru terdaftar","timestamp":"2025-11-23 10:53:31","username":"anonymous"}
+{"level":"info","message":"Akun baru terdaftar","timestamp":"2025-11-23 10:58:18","username":"cihuyy"}
+{"level":"info","message":"User login","timestamp":"2025-11-23 10:58:21","username":"cihuyy"}
+{"level":"info","message":"Akun baru terdaftar","timestamp":"2025-11-23 11:27:07","username":"Ea"}
+{"level":"info","message":"Akun baru terdaftar","timestamp":"2025-11-23 11:30:23","username":"Ea1"}
+{"level":"info","message":"Akun baru terdaftar","timestamp":"2025-11-23 11:32:03","username":"Ea2"}
+{"level":"info","message":"Akun baru terdaftar","timestamp":"2025-11-23 11:33:49","username":"Ea3"}
+{"level":"info","message":"User login","timestamp":"2025-11-23 11:33:51","username":"Ea3"}
+{"level":"info","message":"Akun baru terdaftar","timestamp":"2025-11-23 12:25:34","username":"Ek4"}
+{"level":"info","message":"User login","timestamp":"2025-11-23 12:25:42","username":"Ek4"}
+{"filename":"Screenshot_22-11-2025_18318_.jpeg","level":"info","message":"File uploaded","size":151957,"timestamp":"2025-11-23 12:26:07","username":"Ek4"}
+{"level":"info","message":"Akun baru terdaftar","timestamp":"2025-11-23 12:36:50","username":"Ek3"}
+{"level":"info","message":"User login","timestamp":"2025-11-23 12:36:52","username":"Ek3"}
+{"filename":"WhatsApp Image 2025-11-20 at 20.53.57 (1).jpeg","level":"info","message":"File uploaded","size":145763,"timestamp":"2025-11-23 12:36:57","username":"Ek3"}
+{"level":"info","message":"Backend listening","port":"4000","timestamp":"2025-11-24 08:58:50"}
+{"database":"finpro","host":"db","level":"info","message":"DB pool ready","timestamp":"2025-11-24 08:58:50"}
+{"level":"info","message":"Cloudinary not configured (missing env vars)","timestamp":"2025-11-24 16:14:09"}
+{"level":"info","message":"Backend listening","port":"5000","timestamp":"2025-11-24 16:14:09"}
+{"error":"connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017","level":"error","message":"MongoDB init error","timestamp":"2025-11-24 16:14:39","uri":"mongodb://localhost:27017/finpro"}
+{"level":"info","message":"Akun baru terdaftar","timestamp":"2025-11-24 09:35:00","username":"Ek5"}
+{"level":"info","message":"User login","timestamp":"2025-11-24 09:35:01","username":"Ek5"}
+{"filename":"TP_Jartel10_EkanandaZhafifDean_2306264420.md","level":"info","message":"File uploaded","size":14754,"timestamp":"2025-11-24 09:35:31","username":"Ek5"}
