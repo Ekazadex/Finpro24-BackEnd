@@ -83,3 +83,19 @@
 {"level":"info","message":"Akun baru terdaftar","timestamp":"2025-11-24 09:35:00","username":"Ek5"}
 {"level":"info","message":"User login","timestamp":"2025-11-24 09:35:01","username":"Ek5"}
 {"filename":"TP_Jartel10_EkanandaZhafifDean_2306264420.md","level":"info","message":"File uploaded","size":14754,"timestamp":"2025-11-24 09:35:31","username":"Ek5"}
+{"level":"info","message":"Backend listening","port":4000,"timestamp":"2025-11-24 17:15:44"}
+{"error":"","host":"localhost","level":"error","message":"DB init error","timestamp":"2025-11-24 17:15:44"}
+{"level":"info","message":"Backend listening","port":4000,"timestamp":"2025-11-24 18:00:21"}
+{"error":"","host":"localhost","level":"error","message":"DB init error","timestamp":"2025-11-24 18:00:21"}
+{"level":"info","message":"Backend listening","port":4000,"timestamp":"2025-11-24 18:01:03"}
+{"error":"","host":"localhost","level":"error","message":"DB init error","timestamp":"2025-11-24 18:01:03"}
+{"level":"info","message":"Backend listening","port":4000,"timestamp":"2025-11-24 18:13:20"}
+{"error":"","host":"localhost","level":"error","message":"DB init error","timestamp":"2025-11-24 18:13:20"}
+{"level":"info","message":"Backend listening","port":4000,"timestamp":"2025-11-24 18:26:38"}
+{"error":"","host":"localhost","level":"error","message":"DB init error","timestamp":"2025-11-24 18:26:38"}
+{"level":"info","message":"Backend listening","port":"4000","timestamp":"2025-11-24 11:29:11"}
+{"database":"finpro","host":"db","level":"info","message":"DB pool ready","timestamp":"2025-11-24 11:29:11"}
+{"level":"info","message":"Backend listening","port":4000,"timestamp":"2025-11-24 18:30:18"}
+{"error":"","host":"localhost","level":"error","message":"DB init error","timestamp":"2025-11-24 18:30:18"}
+{"error":"","level":"error","message":"Login error","timestamp":"2025-11-24 19:11:17"}
+{"error":"","level":"error","message":"Register error","timestamp":"2025-11-24 19:11:44"}
