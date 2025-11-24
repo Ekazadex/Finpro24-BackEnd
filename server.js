@@ -316,7 +316,7 @@ app.get('/api/logs', async (req, res) => {
   
   // Allow jika ada token yang match, atau allow untuk development
   const isAuthorized = provided === logsToken || req.query.debug === 'true'
-  if (!isAuthorized && logsToken) {
+  if (!isAuthorized) {
     return res.status(403).json({ ok: false, message: 'Forbidden' })
   }
   
