@@ -343,5 +343,13 @@ app.get('/api/flow', (req, res) => {
   res.json({ flow: ['landing','dos','ftp','report'] })
 })
 
+// OPTIONS handlers for preflight requests from ngrok
+app.options('/api/register', cors())
+app.options('/api/login', cors())
+app.options('/api/upload', cors())
+app.options('/api/file', cors())
+app.options('/api/files', cors())
+app.options('/api/report', cors())
+
 const port = process.env.PORT || 4000
 app.listen(port, () => logger.info('Backend listening', { port }))
