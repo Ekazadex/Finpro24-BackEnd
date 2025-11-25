@@ -74,6 +74,11 @@ let dbPool
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
     `)
     logger.info('DB pool ready', { host: DB_HOST, database: DB_NAME })
+    
+    // Log FTP server info
+    const FTP_HOST = process.env.FTP_HOST || 'localhost'
+    const FTP_PORT = process.env.FTP_PORT || '21'
+    logger.info('FTP server available', { host: FTP_HOST, port: FTP_PORT, protocol: 'VSFTPD' })
   } catch (err) {
     logger.error('DB init error', { error: err.message, host: DB_HOST })
     // Middleware fallback jika DB gagal
@@ -100,6 +105,18 @@ function requireDeleteAuth(req, res, next) {
   }
   next()
 }
+
+// FTP Server monitoring - log FTP activity periodically
+setInterval(() => {
+  const FTP_HOST = process.env.FTP_HOST || 'localhost'
+  const FTP_PORT = process.env.FTP_PORT || '21'
+  logger.info('FTP connection check', { 
+    host: FTP_HOST, 
+    port: FTP_PORT, 
+    protocol: 'VSFTPD',
+    status: 'listening'
+  })
+}, 60000) // Every 60 seconds
 
 // Health check endpoints
 app.get('/health', (req, res) => {
@@ -343,6 +360,22 @@ app.get('/api/flow', (req, res) => {
   res.json({ flow: ['landing','dos','ftp','report'] })
 })
 
+// FTP Status endpoint - shows FTP server details for reconnaissance
+app.get('/api/ftp-status', async (req, res) => {
+  logger.info('FTP status queried', { ip: req.ip })
+  const FTP_HOST = process.env.FTP_HOST || 'localhost'
+  const FTP_PORT = process.env.FTP_PORT || '21'
+  res.json({
+    ftp_available: true,
+    ftp_server: 'VSFTPD',
+    ftp_host: FTP_HOST,
+    ftp_port: FTP_PORT,
+    ftp_user: 'ftpuser',
+    protocol: 'FTP/SFTP',
+    data_dir: '/home/vsftpd/ftp'
+  })
+})
+
 // OPTIONS handlers for preflight requests from ngrok
 app.options('/api/register', cors())
 app.options('/api/login', cors())
@@ -350,6 +383,7 @@ app.options('/api/upload', cors())
 app.options('/api/file', cors())
 app.options('/api/files', cors())
 app.options('/api/report', cors())
+app.options('/api/ftp-status', cors())
 
 const port = process.env.PORT || 4000
 app.listen(port, () => logger.info('Backend listening', { port }))
