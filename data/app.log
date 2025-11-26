@@ -433,3 +433,45 @@
 {"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 18:48:33"}
 {"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 18:49:33"}
 {"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 18:50:33"}
+{"level":"info","message":"Backend listening","port":"4000","timestamp":"2025-11-26 18:51:34"}
+{"database":"finpro","host":"db","level":"info","message":"DB pool ready","timestamp":"2025-11-26 18:51:34"}
+{"host":"localhost","level":"info","message":"FTP server available","port":"21","protocol":"VSFTPD","timestamp":"2025-11-26 18:51:34"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 18:52:34"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 18:53:34"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 18:54:34"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 18:55:34"}
+{"level":"info","message":"User login","timestamp":"2025-11-26 18:56:13","username":"Ek5"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 18:56:34"}
+{"filename":"Exercise CLS - Ekananda Zhafif Dean.pdf","level":"info","message":"Upload start","size":2029148,"timestamp":"2025-11-26 18:56:36","username":"Ek5"}
+{"filename":"Exercise CLS - Ekananda Zhafif Dean.pdf","level":"info","message":"File uploaded","size":2029148,"timestamp":"2025-11-26 18:56:36","username":"Ek5"}
+{"filename":"WhatsApp Image 2025-11-20 at 20.53.01.jpeg","level":"info","message":"File deleted","timestamp":"2025-11-26 18:56:41","username":"Ek5"}
+{"level":"info","message":"Backend listening","port":"4000","timestamp":"2025-11-26 18:57:23"}
+{"database":"finpro","host":"db","level":"info","message":"DB pool ready","timestamp":"2025-11-26 18:57:23"}
+{"host":"localhost","level":"info","message":"FTP server available","port":"21","protocol":"VSFTPD","timestamp":"2025-11-26 18:57:23"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 18:58:23"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 18:59:23"}
+{"level":"info","message":"Backend listening","port":"4000","timestamp":"2025-11-26 18:59:43"}
+{"database":"finpro","host":"db","level":"info","message":"DB pool ready","timestamp":"2025-11-26 18:59:43"}
+{"host":"localhost","level":"info","message":"FTP server available","port":"21","protocol":"VSFTPD","timestamp":"2025-11-26 18:59:43"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 19:00:43"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 19:01:43"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 19:02:43"}
+{"level":"info","message":"Backend listening","port":"4000","timestamp":"2025-11-26 19:03:56"}
+{"database":"finpro","host":"db","level":"info","message":"DB pool ready","timestamp":"2025-11-26 19:03:56"}
+{"host":"localhost","level":"info","message":"FTP server available","port":"21","protocol":"VSFTPD","timestamp":"2025-11-26 19:03:56"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 19:04:56"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 19:05:56"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 19:06:56"}
+{"level":"info","message":"Backend listening","port":"4000","timestamp":"2025-11-26 19:07:26"}
+{"database":"finpro","host":"db","level":"info","message":"DB pool ready","timestamp":"2025-11-26 19:07:26"}
+{"host":"localhost","level":"info","message":"FTP server available","port":"21","protocol":"VSFTPD","timestamp":"2025-11-26 19:07:26"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 19:08:26"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 19:09:26"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 19:10:26"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 19:11:26"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 19:12:26"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 19:13:26"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 19:14:26"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 19:15:26"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 19:16:26"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 19:17:26"}
