@@ -376,6 +376,158 @@ app.get('/api/ftp-status', async (req, res) => {
   })
 })
 
+// Remote file access endpoints - for friend to access files via HTTP/ngrok
+app.get('/api/remote-files', async (req, res) => {
+  const username = req.query.username || 'anonymous'
+  const token = req.query.token || req.headers['x-remote-token'] || ''
+  
+  // Simple token auth
+  if (token !== 'remote-access-2024') {
+    logger.warn('Remote files: unauthorized access attempt', { username, ip: req.ip })
+    return res.status(401).json({ ok: false, message: 'Invalid token' })
+  }
+  
+  const userDir = path.join(DATA_DIR, username)
+  try {
+    if (dbPool) {
+      try {
+        const [rows] = await dbPool.execute('SELECT filename, size, uploaded_at FROM files WHERE username = ? ORDER BY uploaded_at DESC LIMIT 100', [username])
+        const files = rows.map(r => ({ 
+          filename: r.filename, 
+          size: Number(r.size), 
+          uploaded_at: (r.uploaded_at ? new Date(r.uploaded_at).toISOString() : null),
+          download_url: `/api/remote-download?username=${encodeURIComponent(username)}&filename=${encodeURIComponent(r.filename)}&token=remote-access-2024`
+        }))
+        logger.info('Remote files listed', { username, count: files.length })
+        return res.json({ ok: true, files, count: files.length })
+      } catch (dberr) {
+        logger.error('Remote files DB error', { username, error: dberr.message })
+      }
+    }
+
+    const exists = await fs.pathExists(userDir)
+    if (!exists) return res.json({ ok: true, files: [], count: 0 })
+    
+    const items = await fs.readdir(userDir)
+    const files = await Promise.all(items.map(async (name) => {
+      const p = path.join(userDir, name)
+      try {
+        const st = await fs.stat(p)
+        return { 
+          filename: name, 
+          size: st.size, 
+          uploaded_at: st.mtime.toISOString(),
+          download_url: `/api/remote-download?username=${encodeURIComponent(username)}&filename=${encodeURIComponent(name)}&token=remote-access-2024`
+        }
+      } catch (e) {
+        return { filename: name, size: 0, uploaded_at: null }
+      }
+    }))
+    logger.info('Remote files listed (filesystem)', { username, count: files.length })
+    res.json({ ok: true, files, count: files.length })
+  } catch (err) {
+    logger.error('Remote files list error', { username, error: err.message })
+    res.status(500).json({ ok: false, files: [] })
+  }
+})
+
+// Remote file download
+app.get('/api/remote-download', (req, res) => {
+  const username = req.query.username || 'anonymous'
+  const filename = req.query.filename || ''
+  const token = req.query.token || req.headers['x-remote-token'] || ''
+  
+  if (token !== 'remote-access-2024') {
+    logger.warn('Remote download: unauthorized', { username, filename, ip: req.ip })
+    return res.status(401).json({ ok: false, message: 'Invalid token' })
+  }
+  
+  if (!filename) return res.status(400).json({ ok: false, message: 'filename required' })
+  
+  const filePath = path.join(DATA_DIR, username, path.basename(filename))
+  if (!fs.pathExistsSync(filePath)) {
+    logger.warn('Remote download: file not found', { username, filename })
+    return res.status(404).json({ ok: false, message: 'Not found' })
+  }
+  
+  logger.info('Remote file downloaded', { username, filename })
+  res.download(filePath)
+})
+
+// Remote upload endpoint - for friend to upload files
+app.options('/api/remote-upload', cors())
+app.post('/api/remote-upload', upload.single('file'), async (req, res) => {
+  const username = req.body.username || 'anonymous'
+  const token = req.body.token || req.headers['x-remote-token'] || ''
+  
+  if (token !== 'remote-access-2024') {
+    logger.warn('Remote upload: unauthorized', { username, ip: req.ip })
+    return res.status(401).json({ ok: false, message: 'Invalid token' })
+  }
+  
+  try {
+    const file = req.file
+    if (!file) {
+      logger.warn('Remote upload: No file provided', { username })
+      return res.status(400).json({ ok: false, message: 'No file uploaded' })
+    }
+
+    logger.info('Remote upload start', { username, filename: file.originalname, size: file.size })
+    const userDir = path.join(DATA_DIR, username)
+    await fs.ensureDir(userDir)
+
+    const safeName = path.basename(file.originalname)
+    const outPath = path.join(userDir, safeName)
+    await fs.writeFile(outPath, file.buffer)
+
+    try {
+      if (dbPool) {
+        await dbPool.execute(
+          'INSERT INTO files (username, filename, filepath, size, uploaded_at) VALUES (?, ?, ?, ?, ?)',
+          [username, safeName, outPath, file.size, new Date()]
+        )
+      }
+    } catch (dbErr) {
+      logger.error('DB insert error', { username, filename: safeName, error: dbErr.message })
+    }
+    
+    logger.info('Remote file uploaded', { username, filename: safeName, size: file.size })
+    res.json({ ok: true, message: 'File uploaded' })
+  } catch (err) {
+    logger.error('Remote upload failed', { username: req.body?.username, error: err.message })
+    res.status(500).json({ ok: false, message: 'Server error: ' + err.message })
+  }
+})
+
+// Remote access info endpoint
+app.get('/api/remote-info', (req, res) => {
+  res.json({
+    service: 'Remote File Access API',
+    endpoints: [
+      {
+        method: 'GET',
+        path: '/api/remote-files',
+        description: 'List files',
+        query: 'username=xxx&token=remote-access-2024'
+      },
+      {
+        method: 'GET',
+        path: '/api/remote-download',
+        description: 'Download a file',
+        query: 'username=xxx&filename=xxx&token=remote-access-2024'
+      },
+      {
+        method: 'POST',
+        path: '/api/remote-upload',
+        description: 'Upload a file',
+        body: 'multipart/form-data: file + username + token'
+      }
+    ],
+    auth_token: 'remote-access-2024',
+    note: 'Token header alternative: x-remote-token'
+  })
+})
+
 // OPTIONS handlers for preflight requests from ngrok
 app.options('/api/register', cors())
 app.options('/api/login', cors())
@@ -384,6 +536,10 @@ app.options('/api/file', cors())
 app.options('/api/files', cors())
 app.options('/api/report', cors())
 app.options('/api/ftp-status', cors())
+app.options('/api/remote-files', cors())
+app.options('/api/remote-download', cors())
+app.options('/api/remote-upload', cors())
+app.options('/api/remote-info', cors())
 
 const port = process.env.PORT || 4000
 app.listen(port, () => logger.info('Backend listening', { port }))
