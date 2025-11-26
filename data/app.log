@@ -316,3 +316,17 @@
 {"database":"finpro","host":"db","level":"info","message":"DB pool ready","timestamp":"2025-11-26 17:07:17"}
 {"host":"localhost","level":"info","message":"FTP server available","port":"21","protocol":"VSFTPD","timestamp":"2025-11-26 17:07:17"}
 {"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 17:08:17"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 17:09:17"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 17:10:17"}
+{"level":"info","message":"User login","timestamp":"2025-11-26 17:10:53","username":"Ek5"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 17:11:17"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 17:12:17"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 17:13:17"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 17:14:17"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 17:15:17"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 17:16:17"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 17:17:17"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 17:18:17"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 17:19:17"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 17:20:17"}
+{"host":"localhost","level":"info","message":"FTP connection check","port":"21","protocol":"VSFTPD","status":"listening","timestamp":"2025-11-26 17:21:17"}
